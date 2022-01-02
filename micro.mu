@@ -1,1 +1,1 @@
-service category
+service common
