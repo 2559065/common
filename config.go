@@ -1,4 +1,4 @@
-package main
+package common
 
 import (
 	"github.com/micro/go-micro/v2/config"
@@ -15,7 +15,7 @@ func GetConsulConfig(host string, port int64, prefix string) (config.Config, err
 		consul.WithPrefix(prefix),
 		// 是否移除前缀，这里设置为true，表示可以不带前缀直接获取对应配置
 		consul.StripPrefix(true),
-		)
+	)
 	// 配置初始化
 	config, err := config.NewConfig()
 	if err != nil {
